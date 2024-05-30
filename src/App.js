@@ -1,25 +1,26 @@
-import Button from "./Button";
+import Accordion from "./components/Accordion";
 
 function App() {
-    return (
-        <div>
-            <div>
-                <Button primary outline>Primary</Button>
-            </div>
-            <div>
-                <Button secondary rounded outline>Secondary</Button>
-            </div>
-            <div>
-                <Button success rounded>Success</Button>
-            </div>
-            <div>
-                <Button warning outline>Warning</Button>
-            </div>
-            <div>
-                <Button danger>Danger</Button>
-            </div>
-        </div>
-    );
+
+    const items = [
+        {
+            id: '1',
+            label: 'Label 1',
+            content: 'Content 1'
+        },
+        {
+            id: '2',
+            label: 'Label 2',
+            content: 'Content 2'
+        },
+        {
+            id: '3',
+            label: 'Label 3',
+            content: 'Content 3'
+        }
+    ];
+
+    return <Accordion items={items} />;
 }
 
 export default App;
